@@ -2,5 +2,5 @@
 {{ $anchor := safeURL .Anchor }}
 
 <h{{ $level }} id="{{ $anchor }}">
-  <a class="Heading-link u-clickable" href="{{ .Page.RelPermalink }}#{{ $anchor }}">{{ safeHTML .Text }}</a>
+  <p>{{ safeHTML .Text }}</p>
 </h{{ $level }}>

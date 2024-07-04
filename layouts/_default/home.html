@@ -43,11 +43,12 @@
     <article>
       {{ partial "heading.html" . }}
       {{ if site.Params.summaries }}
-        {{ .Summary }}
+        <div class="sum">{{ .Summary }}
         {{ if .Truncated }}
           <p>
             <a class="u-clickable" href="{{ .RelPermalink }}">Read More…</a>
           </p>
+        </div>
         {{ end }}
       {{ else }}
         {{ .Content }}

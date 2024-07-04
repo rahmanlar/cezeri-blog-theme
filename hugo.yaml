@@ -1,11 +1,11 @@
 baseURL: https://example.org/
 title: My New Hugo Site
 languageCode: en-us
-theme: hugo-flex
+theme: cezeri-blog-theme
 
 params:
-  color: teal           # Any color in CSS syntax
-  width: 42rem          # Any length in CSS syntax / leave empty to span page
+  color: black           # Any color in CSS syntax
+  width: 48rem          # Any length in CSS syntax / leave empty to span page
   divider: \2500\2500   # Any string in CSS syntax / leave empty for no divider
   footer: >-            # HTML spaces (&#32;) are needed before HTML elements
     Except where otherwise noted, content on this site is licensed under a &#32;
@@ -43,6 +43,29 @@ params:
   #   - js/foo.js
   #   - bar.js
 
+
+languages:
+  tr: 
+    disabled: false
+    menu: 
+    - name: Hakkında
+      pageRef: /about
+      weight: 1
+    - name: Yazılar
+      pageRef: /post
+      weight: 2
+    - name: Etiketler
+      pageRef: /tags
+      weight: 3
+    - name: Kategoriler
+      pageRef: /categories
+      weight: 4
+#    - name: Akış
+#      pageRef: /
+#      weight: 5
+#      params:
+#        - format: rss
+  
 markup:
   highlight:
     noClasses: *nc      # Set to same value as params.noClasses
@@ -66,11 +89,11 @@ menu:
     - name: Categories
       pageRef: /categories
       weight: 4
-    - name: RSS
-      pageRef: /
-      weight: 5
-      params:
-        - format: rss
+#    - name: Feed
+#      pageRef: /
+#      weight: 5
+#      params:
+#        - format: rss
 
 outputFormats:
   rss:
